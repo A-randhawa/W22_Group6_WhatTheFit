@@ -2,4 +2,8 @@
     <string name="app_name">W22_Group6_WhatTheFit</string>
     <string name="txtTitle">What The Fit!</string>
     <string name="imgDesc">Background Image</string>
+    <string name="txtLogin">Login</string>
+    <string name="txtRegister">Register</string>
+    <string name="txtPassword">Password</string>
+    <string name="txtUsername">Username</string>
 </resources>
