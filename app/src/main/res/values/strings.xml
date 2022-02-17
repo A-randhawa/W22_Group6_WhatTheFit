@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">W22_Group6_WhatTheFit</string>
     <string name="txtTitle">What The Fit!</string>
+    <string name="imgDesc">Background Image</string>
 </resources>
