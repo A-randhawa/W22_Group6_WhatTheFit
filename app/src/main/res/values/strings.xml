@@ -8,4 +8,5 @@
     <string name="txtPassword">Enter Your Password</string>
     <string name="txtLogin">Login</string>
     <string name="btnRegister">Register</string>
+    <string name="BtnMapLocTest">Test Map Location</string>
 </resources>
