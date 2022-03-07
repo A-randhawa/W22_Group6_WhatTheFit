@@ -8,4 +8,6 @@
     <string name="txtPassword">Enter Your Password</string>
     <string name="txtLogin">Login</string>
     <string name="btnRegister">Register</string>
+    <string name="google_map_key">AIzaSyB_qsP8AOP_P0MdlPz-48TDaJYjTP3vbjo</string>
+    <string name="TestGeoLocation">Map Location Tets</string>
 </resources>
