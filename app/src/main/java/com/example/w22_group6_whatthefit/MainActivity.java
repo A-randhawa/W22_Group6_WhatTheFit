@@ -24,5 +24,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this,LoginActivity.class));
         });
 
+
+
+        //declaring test map location button
+        Button testMapLocBtn = findViewById(R.id.btnTestMapLoc);
+        //click listener
+        testMapLocBtn.setOnClickListener((View view) -> {
+            startActivity(new Intent(MainActivity.this,GoogleLocation.class));
+        });
+
     }
 }
