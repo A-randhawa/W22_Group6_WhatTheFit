@@ -3,9 +3,8 @@
     package="com.example.w22_group6_whatthefit">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    //permission for internet
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -14,12 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.W22_Group6_WhatTheFit">
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_map_key"/>
         <activity
-            android:name=".GoogleLocation"
+            android:name=".HomePage"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

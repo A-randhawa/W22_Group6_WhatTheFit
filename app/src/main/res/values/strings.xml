@@ -9,4 +9,7 @@
     <string name="txtLogin">Login</string>
     <string name="btnRegister">Register</string>
     <string name="BtnMapLocTest">Test Map Location</string>
+    <string name="txtHome">Home</string>
+    <string name="txtStats">Stats</string>
+    <string name="txtProfile">Profile</string>
 </resources>
