@@ -72,14 +72,4 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
         app:layout_constraintVertical_bias="0.94" />
 
-    <Button
-        android:id="@+id/btnTestMapLoc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/BtnMapLocTest"
-        app:layout_constraintBottom_toBottomOf="@+id/imgView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
