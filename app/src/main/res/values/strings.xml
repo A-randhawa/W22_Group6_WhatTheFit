@@ -12,4 +12,9 @@
     <string name="txtHome">Home</string>
     <string name="txtStats">Stats</string>
     <string name="txtProfile">Profile</string>
+    <string name="textVeiw1">"Track Your Work Progress "</string>
+    <string name="imgView1">First Image</string>
+    <string name="track_your_progress">Track Your Progress</string>
+    <string name="Btnsignup">Sign Up</string>
+    <string name="BtnSignIn">Sign In</string>
 </resources>
