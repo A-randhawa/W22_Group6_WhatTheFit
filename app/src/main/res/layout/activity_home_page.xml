@@ -7,14 +7,14 @@
     tools:context=".HomePage">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="367dp"
-        android:layout_height="321dp"
+        android:id="@+id/imageViewiId"
+        android:layout_width="407dp"
+        android:layout_height="355dp"
         app:layout_constraintBottom_toTopOf="@+id/animatedBottomBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/WTF_home" />
+        app:srcCompat="@drawable/wtf_homepage" />
 
     <nl.joery.animatedbottombar.AnimatedBottomBar
         android:id="@+id/animatedBottomBar"
