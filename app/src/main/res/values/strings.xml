@@ -17,4 +17,6 @@
     <string name="track_your_progress">Track Your Progress</string>
     <string name="Btnsignup">Sign Up</string>
     <string name="BtnSignIn">Sign In</string>
+    <string name="SetGoals">Set Goals</string>
+    <string name="viewGoalsButton">View Goals</string>
 </resources>

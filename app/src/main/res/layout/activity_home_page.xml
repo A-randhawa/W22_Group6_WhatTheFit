@@ -7,14 +7,36 @@
     tools:context=".HomePage">
 
     <ImageView
-        android:id="@+id/imageViewiId"
-        android:layout_width="407dp"
-        android:layout_height="355dp"
-        app:layout_constraintBottom_toTopOf="@+id/animatedBottomBar"
+        android:id="@+id/imageViewId"
+        android:layout_width="425dp"
+        android:layout_height="329dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wtf_homepage" />
+
+    <Button
+        android:id="@+id/setGoalsbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/baloo_thambi"
+        android:text="@string/SetGoals"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewId" />
+
+    <Button
+        android:id="@+id/viewGoalsbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/viewGoalsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/setGoalsbtn"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewId" />
 
     <nl.joery.animatedbottombar.AnimatedBottomBar
         android:id="@+id/animatedBottomBar"
