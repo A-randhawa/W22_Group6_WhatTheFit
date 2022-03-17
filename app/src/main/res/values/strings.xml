@@ -17,4 +17,5 @@
     <string name="track_your_progress">Track Your Progress</string>
     <string name="Btnsignup">Sign Up</string>
     <string name="BtnSignIn">Sign In</string>
+    <string name="txtBrowse">Browse</string>
 </resources>
