@@ -15,12 +15,13 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         VideoView videoView = findViewById(R.id.videoView1);
-        videoView.setVideoPath("android.resources://"+getPackageName()+"/"+R.raw.workout1);
+        videoView.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.workoutvid2);
        // videoView.setVideoURI(Uri.parse());
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
        // videoView.setOnPreparedListener(mediaPlayer -> videoView.start());
+
 
     }
 }

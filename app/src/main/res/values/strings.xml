@@ -18,4 +18,9 @@
     <string name="Btnsignup">Sign Up</string>
     <string name="BtnSignIn">Sign In</string>
     <string name="txtBrowse">Browse</string>
+    <string name="txtCategories">Categories</string>
+    <string name="txtRecipeText">Healthy Recipes</string>
+    <string name="txtFindGym">Find a Gym</string>
+    <string name="txtWorkouts">Workouts</string>
+    <string name="txtInstructors">Instructors</string>
 </resources>
