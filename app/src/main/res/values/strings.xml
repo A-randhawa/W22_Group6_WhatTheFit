@@ -17,10 +17,23 @@
     <string name="track_your_progress">Track Your Progress</string>
     <string name="Btnsignup">Sign Up</string>
     <string name="BtnSignIn">Sign In</string>
-    <string name="txtBrowse">Browse</string>
+
     <string name="txtCategories">Categories</string>
     <string name="txtRecipeText">Healthy Recipes</string>
     <string name="txtFindGym">Find a Gym</string>
     <string name="txtWorkouts">Workouts</string>
     <string name="txtInstructors">Instructors</string>
+    <string name="txtViewSignUp">Don\'t Have an Account? Sign Up</string>
+    <string name="txtSignUp">Already Have an Account. Login In</string>
+    <string name="txtsignUp">Already Have and Account ?  Log In</string>
+    <string name="txtAgeSignUp">Enter Your Age</string>
+    <string name="txtHeightSignUp">Enter Your Height</string>
+    <string name="txtWeightSignUp">Enter Your Weight</string>
+    <string name="txtNameSignUp">User Name:</string>
+    <string name="txtViewAgeSignUp">Age:</string>
+    <string name="txtViewHeightSignUp">"Height: "</string>
+    <string name="txtViewWeightSignUp">Weight:</string>
+    <string name="txtViewPasswordSignUp">Password:</string>
+    <string name="txtViewNameLogin">User Name:</string>
+    <string name="txtViewPasswordLogin">Password:</string>
 </resources>

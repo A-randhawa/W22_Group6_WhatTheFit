@@ -21,8 +21,26 @@
         android:layout_height="match_parent">
 
 
+        <TextView
+            android:id="@+id/textViewNameLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtViewNameLogin"
+            android:textColor="#040303"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#ECE7E7"
+            android:textColorLink="#FFFDFD"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.396"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.448" />
+
         <EditText
-            android:id="@+id/txtUsername"
+            android:id="@+id/txtUsernameSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -40,8 +58,26 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtViewPasswordLogin"
+            android:textColor="#040303"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#ECE7E7"
+            android:textColorLink="#FFFDFD"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.382"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtUsernameSignUp"
+            app:layout_constraintVertical_bias="0.123" />
+
         <EditText
-            android:id="@+id/txtPassword"
+            android:id="@+id/txtPasswordSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -56,7 +92,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@+id/txtUsernameSignUp"
             app:layout_constraintVertical_bias="0.221"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
@@ -71,7 +107,25 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPassword"
+            app:layout_constraintTop_toBottomOf="@+id/txtPasswordSignUp"
             app:layout_constraintVertical_bias="0.466" />
+
+        <TextView
+            android:id="@+id/txtViewSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:text="@string/txtViewSignUp"
+            android:textAlignment="gravity"
+            android:textColor="#F3F1F1"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#ECE7E7"
+            android:textColorLink="#FFFDFD"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.471"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
