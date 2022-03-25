@@ -40,11 +40,11 @@
             tools:ignore="TextContrastCheck" />
 
 
-        <TextView
+       <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/SliderTextView"
+
             android:textColor="#FFFFFF"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toTopOf="@+id/btnlogin"
