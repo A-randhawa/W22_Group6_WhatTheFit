@@ -7,15 +7,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.List;
 
 //this is the main activity
+
 public class MainActivity extends AppCompatActivity {
 
-
+private int progressBar =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,30 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this,LoginActivity.class));
         });
 
+        //profile page buttons
+        Button btnSleephrId = findViewById(R.id.btnSleephrId);
+        btnSleephrId.setOnClickListener((View view) ->{
+            if (progressBar <=75)
+                progressBar += 25;
+        });
+
+        Button btnExerciseId = findViewById(R.id.btnExerciseId);
+        btnExerciseId.setOnClickListener((View view) ->{
+            if (progressBar <=75)
+                progressBar += 25;
+        });
+
+        Button btnMeditationId = findViewById(R.id.btnMeditationId);
+        btnMeditationId.setOnClickListener((View view) ->{
+            if (progressBar <=75)
+                progressBar += 25;
+        });
+
+        Button btnNoJunkId = findViewById(R.id.btnNoJunkId);
+        btnNoJunkId.setOnClickListener((View view) ->{
+            if (progressBar <=75)
+                progressBar += 25;
+        });
 
         //text link for Sign up
         TextView txtSignUp = findViewById(R.id.txtViewSignUp);
@@ -40,4 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+    
 }
