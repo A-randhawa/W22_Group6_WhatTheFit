@@ -33,8 +33,11 @@ private int progressBar =0;
         //profile page buttons
         Button btnSleephrId = findViewById(R.id.btnSleephrId);
         btnSleephrId.setOnClickListener((View view) ->{
-            if (progressBar <=75)
+            if (progressBar <=75) {
                 progressBar += 25;
+                ProgressBar.combineMeasuredStates(progressBar,progressBar);
+
+            }
         });
 
         Button btnExerciseId = findViewById(R.id.btnExerciseId);
@@ -68,5 +71,5 @@ private int progressBar =0;
     }
 
 
-    
+
 }
