@@ -37,11 +37,15 @@
     <string name="txtViewNameLogin">User Name:</string>
     <string name="txtViewPasswordLogin">Password:</string>
     <string name="SliderTextView">a</string>
-    <string name="CaloriesBurned">Calories Burned</string>
-    <string name="progresscount">60%</string>
-    <string name="HealthyDay">How Healthy ?</string>
-    <string name="Slept8hours">Slept 8 hrs</string>
+    <string name="progresscount">Progress Count</string>
+    <string name="HealthyDay">Healthy Day</string>
+    <string name="Slept8hours">Slept 8 hours</string>
     <string name="Exercise">Exercise</string>
     <string name="Meditation">Meditation</string>
-    <string name="NoJunk">No Junk</string>
+    <string name="NoJunk">NoJunk</string>
+    <string name="txtCategory">Category</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
