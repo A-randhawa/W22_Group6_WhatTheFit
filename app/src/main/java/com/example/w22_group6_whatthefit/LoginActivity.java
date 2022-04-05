@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText eHeight;
     EditText eWeight;
     private String URL ="http://192.168.222.1/whatthefit/login.php";
-
+    DBHelper DB;
     String username,password;
     RequestQueue requestQueue;
 
@@ -52,56 +52,31 @@ public class LoginActivity extends AppCompatActivity {
             username= eUsername.getText().toString().trim();
             password=ePassword.getText().toString().trim();
             if(username !="" && password!="" ) {
+                username = eUsername.getText().toString().trim();
+                password=ePassword.getText().toString().trim();
+                DB = new DBHelper(this);
 
-            StringRequest request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    Log.d("res", response);
-
-                    if(response.equals("success")){
-
-                        Toast.makeText(LoginActivity.this, "Login Successfully", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, HomePage.class);
+                if(username!="" && password!=""){
+                    Boolean checkuserpass = DB.checkusernamepassword(username, password);
+                    if(checkuserpass==true){
+                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        Intent intent  = new Intent(getApplicationContext(), HomePage.class);
                         startActivity(intent);
-                        finish();
-                                            }
-                    else if (response.equals("failure")){
-                        Toast.makeText(LoginActivity.this, "Invalid Login Credentials", Toast.LENGTH_SHORT).show();
-
+                    }else{
+                        Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
                     }
-                }
-            }
-                    , new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
 
                 }
-            }
-
-            ){
-
-
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-
-                    Map<String ,String> map = new HashMap<>();
-                    map.put("username",username);
-
-                    map.put("password",password);
-
-                    return map;
+                else
+                {
+                    Toast.makeText(LoginActivity.this,"Username or password are empty",Toast.LENGTH_SHORT);
                 }
-            };
-                requestQueue.add(request);;
             }
 
-
-
-
-        });
-
+            });
         //text link for Sign up
         TextView txtSignUp = findViewById(R.id.txtViewSignUp);
+
         txtSignUp.setOnClickListener((View view)->{
             startActivity(new Intent(this,SignUp.class));
         });
@@ -109,48 +84,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    public void login(View view){
-        username = eUsername.getText().toString().trim();
-        password=ePassword.getText().toString().trim();
-
-        if(username!="" && password!=""){
-            StringRequest request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    if (response.equals("success")) {
-                        Intent intent = new Intent(LoginActivity.this, HomePage.class);
-                        startActivity(intent);
-                        finish();
-                    } else if (response.equals("failure")) {
-                        Toast.makeText(LoginActivity.this, "Incorrect username or Password", Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(LoginActivity.this,error.toString().trim(),Toast.LENGTH_SHORT);
-                }
-            }){
-                @Nullable
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-
-                    Map<String,String> map = new HashMap<>();
-                    map.put("username",username);
-                    map.put("password",password);
-                    return map;
-                }
-            };
-
-            RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-            requestQueue.add(request);
+    public void login() {
         }
-        else
-        {
-            Toast.makeText(LoginActivity.this,"Username or password are empty",Toast.LENGTH_SHORT);
-        }
-    }
 
 
 }

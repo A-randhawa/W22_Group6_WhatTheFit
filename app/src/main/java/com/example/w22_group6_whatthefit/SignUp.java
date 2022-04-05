@@ -19,6 +19,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.security.spec.ECField;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,9 +34,13 @@ public class SignUp extends AppCompatActivity {
     Button btnRegister;
     private String URL ="http://192.168.222.1/whatthefit/register.php";
     String username,password;
-    String age;
-    String height,weight;
+    int age;
+    Double height,weight;
+    DBHelper DB;
     RequestQueue requestQueue;
+    private static final String TAG = "SignUp";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,57 +73,41 @@ public class SignUp extends AppCompatActivity {
 
     public void save() {
 
-        username= eUsername.getText().toString().trim();
-        password=ePassword.getText().toString().trim();
-        age=(eAge.getText().toString().trim());
-        height=(eHeight.getText().toString().trim());
-        weight=(eWeight.getText().toString().trim());
-
-       // requestQueue.add(request);
-        if(username !="" && password!="" && age!="" && height!="" && weight!=""){
-
-          StringRequest request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-              @Override
-              public void onResponse(String response) {
-                  Log.d("res", response);
-
-                  if(response.equals("success")) {
-                      Toast.makeText(SignUp.this, "User Added Successfully", Toast.LENGTH_SHORT).show();
-                  }
+        try {
 
 
-                   if (response.equals("failure")) {
-                      Toast.makeText(SignUp.this, "Invalid Login Id/Password", Toast.LENGTH_SHORT).show();
-                  }
-                  clearData();
 
+        username = eUsername.getText().toString().trim();
+        password = ePassword.getText().toString().trim();
+        age = Integer.parseInt(eAge.getText().toString().trim());
+        height = Double.parseDouble(eHeight.getText().toString().trim());
+        weight = Double.parseDouble(eWeight.getText().toString().trim());
+            DB = new DBHelper(this);
+        // requestQueue.add(request);
+        if (username != "" && password != "" && age !=0 && height != 0 && weight != 0) {
+            Boolean checkuser = DB.checkusername(username);
+            if(checkuser==false) {
+                Boolean insert = DB.insertData(username, age, height, weight, password);
+                if (insert == true) {
+                    Toast.makeText(SignUp.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+                    clearData();
 
-              }
-          }, new Response.ErrorListener() {
-              @Override
-              public void onErrorResponse(VolleyError error) {
+                } else {
+                    Toast.makeText(SignUp.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                }
 
-              }
-          }){
+            }
+            else
+            {
+                Toast.makeText(SignUp.this, "User Already Exists", Toast.LENGTH_SHORT).show();
+            }
 
-
-              @Override
-              protected Map<String, String> getParams() throws AuthFailureError {
-
-                  Map<String ,String> map = new HashMap<>();
-                  map.put("username",username);
-                  map.put("height",height);
-                  map.put("weight",weight);
-                  map.put("age",age);
-                  map.put("password",password);
-
-                  return map;
-              }
-          };
-           requestQueue.add(request);
+    }}
+        catch (Exception e){
+                   Log.d(TAG,"Sign up exception");
         }
+    }
 
-        }
 
         public void clearData(){
 

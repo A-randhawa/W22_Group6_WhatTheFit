@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +25,8 @@ public class ProfileFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    HomePage homePage;
+    SliderAdapter adapter;
     public ProfileFragment() {
         // Required empty public constructor
     }
@@ -49,10 +52,14 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+      //  LinearLayout linLayout = (LinearLayout) findViewById(R.id.layout_1);
+      //  linLayout.setVisibility(View.GONE);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
