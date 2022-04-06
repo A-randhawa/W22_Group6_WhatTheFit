@@ -93,6 +93,11 @@ public class HomePage extends AppCompatActivity {
                     Intent intent2 = new Intent(HomePage.this,MainMusicActivity.class);
                     startActivity(intent2);
                 }
+                else if(p.equals("0")){
+                    Intent intent3 = new Intent(HomePage.this,MapsActivity.class);
+                    startActivity(intent3);
+
+                }
 
         } });
 
