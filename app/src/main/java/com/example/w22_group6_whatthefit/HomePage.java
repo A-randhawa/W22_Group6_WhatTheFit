@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,12 +13,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.MediaController;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
+
+import java.util.ArrayList;
 
 import nl.joery.animatedbottombar.AnimatedBottomBar;
 
@@ -27,7 +31,9 @@ public class HomePage extends AppCompatActivity {
     private static final String TAG = "HomePage";
 
     FragmentManager fragmentManager;
-
+    RecyclerView recyclerView;
+    TextView noMusicTextView;
+    ArrayList<AudioModel> songsList = new ArrayList<>();
 
 
     @Override
@@ -35,13 +41,10 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         bottom_bar = findViewById(R.id.animatedBottomBar);
-        /*VideoView videoView = findViewById(R.id.videoView1);
-        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.workoutvid2);
-        // videoView.setVideoURI(Uri.parse());
-        MediaController mediaController = new MediaController(this);
-        mediaController.setAnchorView(videoView);
-        videoView.setMediaController(mediaController);*/
-        // videoView.setOnPreparedListener(mediaPlayer -> videoView.start());
+
+        recyclerView = findViewById(R.id.recycler_view);
+        noMusicTextView = findViewById(R.id.no_songs_text);
+
         //image slider
         SliderView sliderView;
         SliderView txtSlider;
@@ -85,6 +88,10 @@ public class HomePage extends AppCompatActivity {
                     Intent intent = new Intent(HomePage.this,VideoActivity.class);
                     startActivity(intent);
 
+                }
+                else if(p.equals("3")){
+                    Intent intent2 = new Intent(HomePage.this,MainMusicActivity.class);
+                    startActivity(intent2);
                 }
 
         } });
