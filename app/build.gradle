@@ -53,6 +53,8 @@ dependencies {
     // To use constraintlayout in compose
     implementation "androidx.constraintlayout:constraintlayout-compose:1.0.0"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'me.relex:circleindicator:1.2.1@aar'
+    implementation 'br.com.simplepass:loading-button-android:1.14.0'
 
 
 

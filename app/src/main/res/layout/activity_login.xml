@@ -59,7 +59,7 @@
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
         <TextView
-            android:id="@+id/textViewPassword"
+            android:id="@+id/txtUsernameSignUp1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txtViewPasswordLogin"

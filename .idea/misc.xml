@@ -3,26 +3,43 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/button_background_blue.xml" value="0.175" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/circle.xml" value="0.175" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/circle_border.xml" value="0.175" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/grad.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/ic_add_img.xml" value="0.175" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/ic_baseline_pause_circle_outline_24.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/ic_brightness_1_black_24dp.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/ic_google_plus.xml" value="0.175" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/ic_login_hero.xml" value="0.2703125" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/ic_maginfy.xml" value="0.15416666666666667" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/ic_register_hero.xml" value="0.2703125" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/drawable/white_border.xml" value="0.15416666666666667" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_google_location.xml" value="0.1" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_home_page.xml" value="0.22" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_login_new.xml" value="0.264" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_main_music.xml" value="0.15885416666666666" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_maps.xml" value="0.10040983606557377" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_music_player.xml" value="0.15885416666666666" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_profile.xml" value="0.1265625" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_register_new.xml" value="0.2" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_sign_up.xml" value="0.1796875" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/activity_video.xml" value="0.2546875" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/each_video.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/fragment_profile.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/fragment_stats.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/fragment_walkthroughone.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/fragment_walkthroughthree.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/fragment_walkthroughtwo.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/grad.xml" value="0.1265625" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/profile.xml" value="0.7862190812720848" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/recycler_item.xml" value="0.1265625" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/slider_item.xml" value="0.1796875" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/layout/walkthrough_activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/anush/AndroidStudioProjects/W22_Group6_WhatTheFit/app/src/main/res/menu/menu.xml" value="0.13229166666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1359375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />

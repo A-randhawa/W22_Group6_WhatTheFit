@@ -45,14 +45,14 @@ public class SignUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_register_new);
          requestQueue = Volley.newRequestQueue(getApplicationContext());
-        eUsername =findViewById(R.id.txtUsernameSignUp);
-        ePassword=findViewById(R.id.txtPasswordSignUp);
-        eAge=findViewById(R.id.txtAgeSignUp);
+        eUsername =findViewById(R.id.txtUsernameSignUp2);
+        ePassword=findViewById(R.id.txtPasswordSignUp2);
+        eAge=findViewById(R.id.txtAgeSignUp1);
         eHeight=findViewById(R.id.txtHeightSignUp);
-        eWeight=findViewById(R.id.txtWeightSignUp);
-        btnRegister=findViewById(R.id.btnSignUp);
+        eWeight=findViewById(R.id.txtWeightSignUp1);
+        btnRegister=findViewById(R.id.btnSignUp2);
         tvStatus=findViewById(R.id.txtViewSignUp);
         username=password="";
 
@@ -65,10 +65,14 @@ public class SignUp extends AppCompatActivity {
          });
 
         //text link for Sign up
-        TextView txtSignUp = findViewById(R.id.txtViewSignUp);
+      /*  TextView txtSignUp = findViewById(R.id.txtViewSignUp);
         txtSignUp.setOnClickListener((View view)->{
             startActivity(new Intent(this,LoginActivity.class));
-        });
+        });*/
+
+
+
+
     }
 
     public void save() {
@@ -106,6 +110,12 @@ public class SignUp extends AppCompatActivity {
         catch (Exception e){
                    Log.d(TAG,"Sign up exception");
         }
+    }
+
+    public void onLoginClick(View view){
+        startActivity(new Intent(this,LoginActivity.class));
+        overridePendingTransition(R.anim.slide_in_left,android.R.anim.slide_out_right);
+
     }
 
 

@@ -1,25 +1,30 @@
 package com.example.w22_group6_whatthefit;
 
+import android.database.Cursor;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ProfileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import nl.joery.animatedbottombar.AnimatedBottomBar;
+
 public class ProfileFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final String TAG = "ProfileFragment";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -27,45 +32,39 @@ public class ProfileFragment extends Fragment {
 
     HomePage homePage;
     SliderAdapter adapter;
-    public ProfileFragment() {
-        // Required empty public constructor
-    }
+    AnimatedBottomBar bottom_bar;
+    FragmentManager fragmentManager;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ProfileFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ProfileFragment newInstance(String param1, String param2) {
-        ProfileFragment fragment = new ProfileFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-      //  LinearLayout linLayout = (LinearLayout) findViewById(R.id.layout_1);
-      //  linLayout.setVisibility(View.GONE);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        DBHelper dbHelper = new DBHelper(getContext());
+
+        String currentUser = getArguments().getString("currentUser");
+
+        View view= inflater.inflate(R.layout.activity_profile, container, false);
+
+        TextView txtUsername = view.findViewById(R.id.tv_name);
+        TextView age = view.findViewById(R.id.txtAge);
+        TextView height = view.findViewById(R.id.txtHeight);
+        TextView weight = view.findViewById(R.id.txtWeight);
+        Cursor cursor = dbHelper.viewData(currentUser);
+        while (cursor.moveToNext()){
+            String user =cursor.getString(0);
+            int age1 =cursor.getInt(1);
+            Double height1 =cursor.getDouble(2);
+            Double weight1 =cursor.getDouble(3);
+            txtUsername.setText(user);
+            age.setText(age1+"");
+            height.setText(height1 +"cm");
+            weight.setText(weight1+" Kg");
+
+        }
+
+
+        return view;
+
     }
 }

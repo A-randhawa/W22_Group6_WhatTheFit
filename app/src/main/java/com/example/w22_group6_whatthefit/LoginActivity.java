@@ -1,28 +1,17 @@
 package com.example.w22_group6_whatthefit;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -39,12 +28,12 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login_new);
         username= password="";
-        eUsername=findViewById(R.id.txtUsernameSignUp);
-        ePassword=findViewById(R.id.txtPasswordSignUp);
+        eUsername=findViewById(R.id.txtUsernameSignUp1);
+        ePassword=findViewById(R.id.txtWeightSignUp1);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
-        Button loginBtn = findViewById(R.id.btnSignUp);
+        Button loginBtn = findViewById(R.id.btnSignUp1);
         //click listener
         loginBtn.setOnClickListener((View view) -> {
 
@@ -60,7 +49,10 @@ public class LoginActivity extends AppCompatActivity {
                     Boolean checkuserpass = DB.checkusernamepassword(username, password);
                     if(checkuserpass==true){
                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                        Intent intent  = new Intent(getApplicationContext(), HomePage.class);
+                        Intent intent  = new Intent(LoginActivity.this, HomePage.class);
+                        //String currentUserNameKey="";
+                        intent.putExtra( "currentUserNameKey", username);
+
                         startActivity(intent);
                     }else{
                         Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
@@ -75,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
 
             });
         //text link for Sign up
-        TextView txtSignUp = findViewById(R.id.txtViewSignUp);
+        TextView txtSignUp = findViewById(R.id.txtViewSignUp1);
 
         txtSignUp.setOnClickListener((View view)->{
             startActivity(new Intent(this,SignUp.class));

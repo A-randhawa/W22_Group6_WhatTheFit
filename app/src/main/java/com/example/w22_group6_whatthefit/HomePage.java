@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -44,6 +45,9 @@ public class HomePage extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler_view);
         noMusicTextView = findViewById(R.id.no_songs_text);
+
+// set Fragmentclass Arguments
+      //  ProfileFragment fragobj = new ProfileFragment();
 
         //image slider
         SliderView sliderView;
@@ -110,32 +114,44 @@ public class HomePage extends AppCompatActivity {
         bottom_bar.setOnTabSelectListener(new AnimatedBottomBar.OnTabSelectListener() {
              @Override
              public void onTabSelected(int lastIndex, @Nullable AnimatedBottomBar.Tab lastTab, int newIndex, @NonNull AnimatedBottomBar.Tab newTab) {
-                 Fragment fragment=null;
+                // Fragment fragment=null;
+            //     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
                  switch (newTab.getId()){
                      case R.id.tab_home:
                          Log.i(TAG,"home");
-                         fragment= new HomeFragment();
+                        // fragment= new HomeFragment();
+                         Intent intent = new Intent(getApplicationContext(),HomePage.class);
+                         startActivity(intent);
                          break;
                      case R.id.tab_stats:
                          Log.i(TAG,"stats");
-                         fragment= new StatsFragment();
+                      //   fragment= new StatsFragment();
+                         //fragmentTransaction.replace(R.id.homePage,fragment).commit();
                          break;
                      case  R.id.tab_profile:
                          Log.i(TAG,"profile");
-                         fragment= new ProfileFragment();
+                         sliderView.setVisibility(View.GONE);
+                       ProfileFragment  profileFragment= new ProfileFragment();
+                         Intent intentVal = getIntent();
 
-                         break;
-                 }
-                 if(fragment!=null){
+                         try {
 
-                     fragmentManager=getSupportFragmentManager();
-                     fragmentManager.beginTransaction().replace(R.id.relativeLayout,fragment).commit();
+
+                             String currentUsername = intentVal.getExtras().getString("currentUserNameKey");
+                             Bundle bundle = getIntent().getExtras();
+                             bundle.putString("currentUser", currentUsername);
+                             profileFragment.setArguments(bundle);
+                             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                             fragmentTransaction.replace(R.id.relativeLayout, profileFragment).commit();
+                             break;
+                         }
+                         catch (Exception e){
+                             Log.d(TAG,e.getMessage());
+                         }
+
                  }
-                 else
-                 {
-                     Log.d(TAG,"Error in creating fragment");
-                 }
+
 
              }
 

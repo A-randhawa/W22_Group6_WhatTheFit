@@ -60,4 +60,14 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
+    public Cursor viewData(String username){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        Cursor cursor = MyDB.rawQuery("Select * from users where username = ?", new String[]{username});
+
+        return cursor;
+
+    }
+
+
+
 }
