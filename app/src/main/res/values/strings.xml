@@ -49,4 +49,117 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="get_started">"Get Started "</string>
+    <string name="txtBMI">BMI</string>
+
+    <string name="cookBook">CookBook</string>
+    <string name="txtChicken">Herbed Chicken Marsala</string>
+    <string name="txtTemp">425 F</string>
+    <string name="time">35 min</string>
+    <string name="quinoatxt">Quinoa Salad</string>
+    <string name="paragraph"><b><i>Ingredients</i></b>
+\n\n
+1) Deselect All
+\n
+2) 1/4 cup red wine vinegar
+\n
+3) 2 tablespoons sugar
+\n
+4) 2 tablespoons peanut or vegetable oil, eyeball it
+\n
+5) 1 sack, 16 ounces, shredded cabbage mix for slaw salads
+\n
+6) 1 teaspoon salt
+\n
+<b>Full recipe : </b>www.foodnetwork.com/recipes/rachael-ray/oil-and-vinegar-slaw-recipe-1942496\n\n\n
+    </string>
+    <string name="paragraph1"><b><i>Ingredients</i></b>
+\n\n
+1) Deselect All
+\n
+2) Four 5-ounce center-cut salmon fillets (about 1-inch thick)
+\n
+3) 3 tablespoons fresh lemon juice
+\n
+4) 3 tablespoons olive oil
+\n
+5) Kosher salt
+\n
+6) 1 bunch kale, ribs removed, leaves very thinly sliced (about 6 cups)
+\n
+        <b>Full recipe :</b> www.foodnetwork.com/recipes/food-network-kitchen/pan-seared-salmon-with-kale-and-apple-salad-recipe-3361718
+
+    </string>
+
+    <string name="paragraph3"><b><i>Ingredients</i></b>\n\n
+
+
+1) Four 4-ounce boneless, skinless chicken breast cutlets\n
+
+2) Kosher salt and freshly ground black pepper\n
+
+3) 1/3 cup whole wheat flour\n
+
+4) 1 1/2 tablespoons extra-virgin olive oil\n
+
+5) 3/4 cup low-sodium chicken broth\n
+
+6) 1/3 cup sun-dried tomatoes (not packed in oil; not rehydrated), finely chopped or very thinly sliced\n
+
+        <b>Full Recipe:</b>www.foodnetwork.com/recipes/food-network-kitchen/herbed-chicken-marsala-recipe-2121049</string>
+
+
+    <string name="paragraph4"><b><i>Ingredients</i></b>\n\n
+1) 12 cups water\n
+
+2) 1 1/2 cups quinoa, rinsed\n
+
+3) 5 pickling cucumbers, peeled, ends trimmed, and cut into 1/4-inch cubes\n
+
+4) 1 small red onion, cut into 1/4-inch cubes\n
+
+5)  large tomato, cored, seeded, and diced\n
+
+
+       <b> Full Recipe:</b> www.foodnetwork.com/recipes/quinoa-salad-recipe0-1946649
+
+
+    </string>
+
+    <string name="paragraph5"><b><i>Ingredients</i></b>\n\n
+
+1) 1 cup frozen mixed berries\n
+
+2) 3/4 cup orange juice\n
+
+3) 1/4 cup low-fat vanilla yogurt\n
+
+4) 1 frozen ripe banana\n
+
+5) 1 teaspoon honey, optional\n
+
+       <b> Full Recipe:</b> www.foodnetwork.com/recipes/food-network-kitchen/mixed-berries-and-banana-smoothie-and-smoothie-bowl-3364898
+
+    </string>
+    <string name="paragraph6"><b><i>Ingredients</i></b>\n\n
+    1) 3/4 cup instant grits\n
+
+    2) Kosher salt and freshly ground black pepper\n
+
+    3) 1/4 cup grated parmesan cheese\n
+
+    4) 3 tablespoons unsalted butter\n
+
+    5)  1/4 pounds medium shrimp, peeled and deveined (tails intact)\n
+
+    6) 2 large cloves garlic, minced\n
+
+    <b> Full Recipe:</b>www.foodnetwork.com/recipes/food-network-kitchen/lemon-garlic-shrimp-and-grits-3562057
+
+    </string>
+
+
+
+
+
+
 </resources>

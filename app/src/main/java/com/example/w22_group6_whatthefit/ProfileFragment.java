@@ -1,6 +1,7 @@
 package com.example.w22_group6_whatthefit;
 
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import nl.joery.animatedbottombar.AnimatedBottomBar;
@@ -56,6 +58,7 @@ public class ProfileFragment extends Fragment {
             int age1 =cursor.getInt(1);
             Double height1 =cursor.getDouble(2);
             Double weight1 =cursor.getDouble(3);
+            CalBMI(view,height1,weight1);
             txtUsername.setText(user);
             age.setText(age1+"");
             height.setText(height1 +"cm");
@@ -64,7 +67,45 @@ public class ProfileFragment extends Fragment {
         }
 
 
+
+
+
         return view;
 
     }
+
+
+    public void CalBMI(View view,Double weight,Double height){
+
+
+        TextView BMIVal = view.findViewById(R.id.txtBMIVal);
+        RelativeLayout BMIR= view.findViewById(R.id.BMIRel);
+        Double weightBMI= weight;
+        Double heightBMI= height;
+        Double BMI= weightBMI/(heightBMI*heightBMI);
+
+        if(BMI<18.5){
+            BMIR.setBackgroundColor(Color.GRAY);
+            BMIVal.setText("Under Weight");
+
+        }
+        else if(BMI>18.5 && BMI<24.9){
+
+            BMIR.setBackgroundColor(Color.GREEN);
+            BMIVal.setText("Normal Weight");
+
+        }
+
+        else if(BMI>25.0 ){
+
+            BMIR.setBackgroundColor(Color.RED);
+            BMIVal.setText("Over Weight");
+
+        }
+
+
+
+
+    }
+
 }

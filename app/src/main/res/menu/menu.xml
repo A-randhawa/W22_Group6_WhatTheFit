@@ -5,10 +5,7 @@
         android:id="@+id/tab_home"
         android:icon="@drawable/home_page"
         android:title="@string/txtHome" />
-    <item
-        android:id="@+id/tab_stats"
-        android:icon="@drawable/bar_chart"
-        android:title="@string/txtStats" />
+
     <item
         android:id="@+id/tab_profile"
         android:icon="@drawable/gym_icon"

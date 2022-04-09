@@ -102,6 +102,11 @@ public class HomePage extends AppCompatActivity {
                     startActivity(intent3);
 
                 }
+                else if(p.equals("1")){
+                    Intent intent4 = new Intent(HomePage.this,RecipeMainActivity.class);
+                    startActivity(intent4);
+
+                }
 
         } });
 
@@ -124,11 +129,7 @@ public class HomePage extends AppCompatActivity {
                          Intent intent = new Intent(getApplicationContext(),HomePage.class);
                          startActivity(intent);
                          break;
-                     case R.id.tab_stats:
-                         Log.i(TAG,"stats");
-                      //   fragment= new StatsFragment();
-                         //fragmentTransaction.replace(R.id.homePage,fragment).commit();
-                         break;
+
                      case  R.id.tab_profile:
                          Log.i(TAG,"profile");
                          sliderView.setVisibility(View.GONE);
