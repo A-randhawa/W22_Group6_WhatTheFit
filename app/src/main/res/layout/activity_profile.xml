@@ -10,7 +10,7 @@
         android:id="@+id/rellay1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/grad"
+        android:background="@color/primaryTextColor"
         android:paddingBottom="20dp">
 
         <RelativeLayout
@@ -65,7 +65,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="@color/followersBg"
+            android:background="@color/primaryTextColor"
             android:gravity="center"
             android:paddingTop="5dp"
             android:paddingBottom="5dp">

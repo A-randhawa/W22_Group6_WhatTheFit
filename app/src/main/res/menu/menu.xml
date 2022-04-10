@@ -11,4 +11,9 @@
         android:icon="@drawable/gym_icon"
         android:title="@string/txtProfile" />
 
+    <item
+        android:id="@+id/tab_logout"
+        android:icon="@drawable/ic_wtf_logout_24"
+        android:title="@string/logout" />
+
 </menu>

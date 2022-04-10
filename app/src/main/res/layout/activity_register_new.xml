@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/register_bk_color"
+    android:background="#F0F6F6"
     android:focusableInTouchMode="true"
     android:gravity="center"
     tools:context=".SignUp">
@@ -31,14 +31,14 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:text="Here’s\nyour first\nstep with \nus! "
-                    android:textColor="@color/whiteTextColor" />
+                    android:textColor="@color/black" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_login_hero" />
+                    android:src="@drawable/regisimg" />
             </RelativeLayout>
 
             <androidx.cardview.widget.CardView
@@ -63,6 +63,7 @@
                             android:id="@+id/txtUsernameSignUp2"
                             style="@style/modifiedEditText"
                             android:layout_height="28dp"
+                            android:backgroundTint="#F0F2F3"
                             android:hint="@string/txtUsername"
                             android:inputType="textPersonName"
                             android:maxLines="1"
@@ -78,6 +79,7 @@
                             android:id="@+id/txtPasswordSignUp2"
                             style="@style/modifiedEditText"
                             android:layout_height="28dp"
+                            android:backgroundTint="#F0F2F3"
                             android:hint="@string/txtViewPasswordSignUp"
                             android:inputType="textEmailAddress"
                             android:maxLines="1"
@@ -93,6 +95,7 @@
                             android:id="@+id/txtAgeSignUp1"
                             style="@style/modifiedEditText"
                             android:layout_height="28dp"
+                            android:backgroundTint="#F0F2F3"
                             android:hint="@string/txtAgeSignUp"
                             android:inputType="phone"
                             android:maxLines="1"
@@ -108,6 +111,7 @@
                             android:id="@+id/txtHeightSignUp1"
                             style="@style/modifiedEditText"
                             android:layout_height="28dp"
+                            android:backgroundTint="#F0F2F3"
                             android:hint="@string/txtHeightSignUp"
                             android:inputType="textPassword"
                             android:maxLines="1"
@@ -123,6 +127,7 @@
                             android:id="@+id/txtWeightSignUp1"
                             style="@style/modifiedEditText"
                             android:layout_height="28dp"
+                            android:backgroundTint="#F0F2F3"
                             android:hint="@string/txtWeightSignUp"
                             android:inputType="textPassword"
                             android:maxLines="1"
@@ -136,6 +141,7 @@
                         android:layout_height="30dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:backgroundTint="@color/primaryTextColor"
                         android:text="Register"
                         app:initialCornerAngle="27dp"
                         app:spinning_bar_color="#FFF"
@@ -146,10 +152,11 @@
                     <TextView
                         style="@style/parent"
                         android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:backgroundTint="#151111"
                         android:onClick="onLoginClick"
                         android:text="Already have an account?"
                         android:textAlignment="center"
-                        android:textColor="@color/themeColor"
+                        android:textColor="@color/circleBorder"
                         android:textSize="17sp"
                         android:textStyle="bold"
                         tools:ignore="TouchTargetSizeCheck" />
@@ -199,7 +206,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/ic_side_bg" />
+        android:background="@drawable/ic_side_bg"
+        android:backgroundTint="#575151" />
 
     <ImageView
         android:layout_width="wrap_content"

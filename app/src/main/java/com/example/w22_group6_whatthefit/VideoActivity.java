@@ -22,8 +22,8 @@ public class VideoActivity extends AppCompatActivity {
         videoList= new ArrayList<>();
         viewPager2=findViewById(R.id.viewPager2);
 
-        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video1,"Title 1","Simple ab workout"));
-        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video2,"Title 2","Simple home workout"));
+        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video1,"AB Workout","Simple ab workout "));
+        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video2,"Home Workout","Simple home workout"));
 
         adapter = new VideoAdapter(videoList);
         viewPager2.setAdapter(adapter);

@@ -21,7 +21,7 @@ private int progressBar =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_new);
         //changes made here are displayed on local repo
 
         Button loginBtn = findViewById(R.id.btnlogin);

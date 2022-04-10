@@ -8,34 +8,13 @@
     tools:context=".HomePage">
 
 
-    <TextView
-        android:id="@+id/txtCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="712dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:lineSpacingExtra="8sp"
-        android:paddingTop="20dp"
-        android:paddingBottom="5dp"
-        android:text="@string/txtCategory"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-
     //image slider
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/animatedBottomBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -50,7 +29,7 @@
             app:sliderAutoCycleDirection="back_and_forth"
             app:sliderAutoCycleEnabled="true"
             app:sliderIndicatorAnimationDuration="700"
-            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorGravity="bottom|center_horizontal"
             app:sliderIndicatorMargin="15dp"
             app:sliderIndicatorOrientation="horizontal"
             app:sliderIndicatorPadding="3dp"
@@ -61,8 +40,90 @@
             app:sliderStartAutoCycle="true" />
 
 
+        <LinearLayout
+            android:id="@+id/bottomLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_slider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="70dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                app:srcCompat="@drawable/icon_wtf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:letterSpacing="0.0265"
+                android:paddingTop="20.3dp"
+                android:paddingBottom="12.9dp"
+                android:text="WHAT THE FIT"
+                android:textColor="@color/myfav"
+                android:textSize="14.3sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:lineSpacingExtra="4.7sp"
+                android:text="Your Total Fitness Solution "
+                android:textColor="@color/blackTxt"
+                android:textSize="23.3sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:lineSpacingExtra="4.7sp"
+                android:text="In one App "
+                android:textColor="@color/blackTxt"
+                android:textSize="23.3sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4.5dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:letterSpacing="0.0265"
+                android:text="Health is wealth"
+                android:textColor="@color/grayTxt"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:letterSpacing="0.0265"
+                android:text="Get inspired and start now"
+                android:textColor="@color/grayTxt"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
         //for text slider
     </RelativeLayout>
+
+
+
+
+
 
 
     //bottom animation

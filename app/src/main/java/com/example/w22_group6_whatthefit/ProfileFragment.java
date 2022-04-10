@@ -12,6 +12,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -38,13 +40,14 @@ public class ProfileFragment extends Fragment {
     FragmentManager fragmentManager;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         DBHelper dbHelper = new DBHelper(getContext());
 
-        String currentUser = getArguments().getString("currentUser");
+        String currentUser = "anushr";
 
         View view= inflater.inflate(R.layout.activity_profile, container, false);
 

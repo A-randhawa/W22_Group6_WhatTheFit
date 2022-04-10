@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     DBHelper DB;
     String username,password;
     RequestQueue requestQueue;
-
+    TextView txtBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         ePassword=findViewById(R.id.txtWeightSignUp1);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         Button loginBtn = findViewById(R.id.btnSignUp1);
+
+        txtBack=findViewById(R.id.txtBack);
         //click listener
         loginBtn.setOnClickListener((View view) -> {
 
@@ -51,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         Intent intent  = new Intent(LoginActivity.this, HomePage.class);
                         //String currentUserNameKey="";
-                        intent.putExtra( "currentUserNameKey", username);
+                      //  intent.putExtra( "currentUserNameKey", username);
 
                         startActivity(intent);
                     }else{
@@ -73,11 +75,24 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(this,SignUp.class));
         });
 
+        txtBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+
+                overridePendingTransition(R.anim.slide_in_left,android.R.anim.slide_out_right);
+
+            }
+        });
+
+
+
     }
 
 
     public void login() {
         }
+
 
 
 }

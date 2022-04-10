@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,7 +36,7 @@ public class HomePage extends AppCompatActivity {
     RecyclerView recyclerView;
     TextView noMusicTextView;
     ArrayList<AudioModel> songsList = new ArrayList<>();
-
+    LinearLayout bottomLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +55,10 @@ public class HomePage extends AppCompatActivity {
         SliderView txtSlider;
         //using an array for images
         int[] images = {
-                R.drawable.gyms,
-                R.drawable.healhtyfood,
-                R.drawable.workouts,
-                R.drawable.music};
+                R.drawable.findagym,
+                R.drawable.healthyfoods,
+                R.drawable.wvideos,
+                R.drawable.wmusic};
 
         String[] txtViews ={
                 "Gyms Near You",
@@ -68,7 +69,7 @@ public class HomePage extends AppCompatActivity {
         sliderView = findViewById(R.id.image_slider);
         //txtSlider = findViewById(R.id.txtViewsSlider);
 
-
+        bottomLayout=findViewById(R.id.bottomLinearLayout);
         SliderAdapter sliderAdapter = new SliderAdapter(images);
         //text slider adapter
         //txtSliderAdapter textSlider = new txtSliderAdapter(txtSlider);
@@ -133,16 +134,17 @@ public class HomePage extends AppCompatActivity {
                      case  R.id.tab_profile:
                          Log.i(TAG,"profile");
                          sliderView.setVisibility(View.GONE);
+                         bottomLayout.setVisibility(View.GONE);
                        ProfileFragment  profileFragment= new ProfileFragment();
                          Intent intentVal = getIntent();
 
                          try {
 
 
-                             String currentUsername = intentVal.getExtras().getString("currentUserNameKey");
-                             Bundle bundle = getIntent().getExtras();
-                             bundle.putString("currentUser", currentUsername);
-                             profileFragment.setArguments(bundle);
+                           //  String currentUsername = intentVal.getExtras().getString("currentUserNameKey");
+                            // Bundle bundle = getIntent().getExtras();
+                             //bundle.putString("currentUser", currentUsername);
+                             //profileFragment.setArguments(bundle);
                              FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                              fragmentTransaction.replace(R.id.relativeLayout, profileFragment).commit();
                              break;
@@ -150,6 +152,15 @@ public class HomePage extends AppCompatActivity {
                          catch (Exception e){
                              Log.d(TAG,e.getMessage());
                          }
+
+                     case R.id.tab_logout:
+                         Log.i(TAG,"logout");
+                         // fragment= new HomeFragment();
+                         Intent intentout = new Intent(getApplicationContext(),MainActivity.class);
+                         startActivity(intentout);
+                         break;
+
+
 
                  }
 
