@@ -50,20 +50,20 @@ public class LoginActivity extends AppCompatActivity {
                 if(username!="" && password!=""){
                     Boolean checkuserpass = DB.checkusernamepassword(username, password);
                     if(checkuserpass==true){
-                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getBaseContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                         Intent intent  = new Intent(LoginActivity.this, HomePage.class);
                         //String currentUserNameKey="";
                       //  intent.putExtra( "currentUserNameKey", username);
 
                         startActivity(intent);
                     }else{
-                        Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getBaseContext(), "Invalid Credentials", Toast.LENGTH_SHORT).show();
                     }
 
                 }
                 else
                 {
-                    Toast.makeText(LoginActivity.this,"Username or password are empty",Toast.LENGTH_SHORT);
+                    Toast.makeText(getBaseContext(),"Username or password are empty",Toast.LENGTH_SHORT).show();
                 }
             }
 

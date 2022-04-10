@@ -50,7 +50,7 @@ public class SignUp extends AppCompatActivity {
         eUsername =findViewById(R.id.txtUsernameSignUp2);
         ePassword=findViewById(R.id.txtPasswordSignUp2);
         eAge=findViewById(R.id.txtAgeSignUp1);
-        eHeight=findViewById(R.id.txtHeightSignUp);
+        eHeight=findViewById(R.id.txtHeightSignUp1);
         eWeight=findViewById(R.id.txtWeightSignUp1);
         btnRegister=findViewById(R.id.btnSignUp2);
         tvStatus=findViewById(R.id.txtViewSignUp);
@@ -93,17 +93,17 @@ public class SignUp extends AppCompatActivity {
             if(checkuser==false) {
                 Boolean insert = DB.insertData(username, age, height, weight, password);
                 if (insert == true) {
-                    Toast.makeText(SignUp.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
                     clearData();
 
                 } else {
-                    Toast.makeText(SignUp.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(), "Please enter all the fields", Toast.LENGTH_SHORT).show();
                 }
 
             }
             else
             {
-                Toast.makeText(SignUp.this, "User Already Exists", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), "User Already Exists", Toast.LENGTH_SHORT).show();
             }
 
     }}

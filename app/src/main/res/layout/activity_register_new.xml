@@ -62,7 +62,7 @@
                         <EditText
                             android:id="@+id/txtUsernameSignUp2"
                             style="@style/modifiedEditText"
-                            android:layout_height="28dp"
+                            android:layout_height="50dp"
                             android:backgroundTint="#F0F2F3"
                             android:hint="@string/txtUsername"
                             android:inputType="textPersonName"
@@ -78,10 +78,10 @@
                         <EditText
                             android:id="@+id/txtPasswordSignUp2"
                             style="@style/modifiedEditText"
-                            android:layout_height="28dp"
+                            android:layout_height="50dp"
                             android:backgroundTint="#F0F2F3"
                             android:hint="@string/txtViewPasswordSignUp"
-                            android:inputType="textEmailAddress"
+                            android:inputType="textPassword"
                             android:maxLines="1"
                             tools:ignore="TouchTargetSizeCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -94,10 +94,10 @@
                         <EditText
                             android:id="@+id/txtAgeSignUp1"
                             style="@style/modifiedEditText"
-                            android:layout_height="28dp"
+                            android:layout_height="50dp"
                             android:backgroundTint="#F0F2F3"
                             android:hint="@string/txtAgeSignUp"
-                            android:inputType="phone"
+                            android:inputType="number|phone"
                             android:maxLines="1"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -110,10 +110,10 @@
                         <EditText
                             android:id="@+id/txtHeightSignUp1"
                             style="@style/modifiedEditText"
-                            android:layout_height="28dp"
+                            android:layout_height="50dp"
                             android:backgroundTint="#F0F2F3"
                             android:hint="@string/txtHeightSignUp"
-                            android:inputType="textPassword"
+                            android:inputType="number|textPassword"
                             android:maxLines="1"
                             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -126,10 +126,10 @@
                         <EditText
                             android:id="@+id/txtWeightSignUp1"
                             style="@style/modifiedEditText"
-                            android:layout_height="28dp"
+                            android:layout_height="50dp"
                             android:backgroundTint="#F0F2F3"
                             android:hint="@string/txtWeightSignUp"
-                            android:inputType="textPassword"
+                            android:inputType="number|textPassword"
                             android:maxLines="1"
                             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
